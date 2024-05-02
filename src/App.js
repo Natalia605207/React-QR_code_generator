@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'; 
 import './App.css'; 
-import { BsArrowRightCircleFill } from "react-icons/bs";
+import { FaArrowCircleRight } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -33,11 +33,11 @@ return (
       type="text"
       onChange={(e) => {setInput(e.target.value)}} 
 			placeholder="Enter text or URL" /> 
-		<BsArrowRightCircleFill  className="generateBtn" onClick={handleClick} /> 
+		<FaArrowCircleRight className="generateBtn" onClick={handleClick} /> 
 		</div> 
 		<div className="bgColor-size"> 
 		<p>Background Color:</p> 
-		<input className="bg-input" 
+		<input className="bg-input"
     type="color" 
     onChange={(e) => 
 		{ setBgColor(e.target.value.substring(1)) }} /> 
