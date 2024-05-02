@@ -27,13 +27,13 @@ return (
   transition={{ duration: 2, delay: 1.5 }}
 >
 	<h1>QR Code Generator</h1> 
-	<div className="center"> 
+	<div className="settings center"> 
 		<div className="input-container"> 
 		<input className="info"
       type="text"
       onChange={(e) => {setInput(e.target.value)}} 
 			placeholder="Enter text or URL" /> 
-		<p className="generate"><FaArrowCircleRight className="generateBtn" onClick={handleClick} /></p>
+		<span><FaArrowCircleRight className="generateBtn" onClick={handleClick} /></span>
 		</div> 
 		<div className="bgColor-size"> 
 		<p>Background Color:</p> 
