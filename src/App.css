@@ -57,6 +57,7 @@ h1 {
 .generateBtn {
   font-size: 40px; 
   cursor: pointer;
+  color:#00cec4;
   transition: all 0.3s ease-in;
 }
 
