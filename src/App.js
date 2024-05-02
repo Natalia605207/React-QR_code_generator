@@ -33,7 +33,7 @@ return (
       type="text"
       onChange={(e) => {setInput(e.target.value)}} 
 			placeholder="Enter text or URL" /> 
-		<FaArrowCircleRight className="generateBtn" onClick={handleClick} /> 
+		<p className="generate"><FaArrowCircleRight className="generateBtn" onClick={handleClick} /></p>
 		</div> 
 		<div className="bgColor-size"> 
 		<p>Background Color:</p> 
