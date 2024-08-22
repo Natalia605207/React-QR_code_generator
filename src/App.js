@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'; 
 import './App.css'; 
-import { FaArrowCircleRight } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { TextInput } from './components/TextInput';
+import { BgColorAndSize } from './components/BgColorAndSize';
+import { QrCode } from './components/QrCode';
 
 function App() { 
 const [input, setInput] = useState(""); 
@@ -28,35 +29,10 @@ return (
 >
 	<h1>QR Code Generator</h1> 
 	<div className="settings center"> 
-		<div className="input-container"> 
-		<input className="info"
-      type="text"
-      onChange={(e) => {setInput(e.target.value)}} 
-			placeholder="Enter text or URL" /> 
-		<span><FaArrowCircleRight className="generateBtn" onClick={handleClick} /></span>
-		</div> 
-		<div className="bgColor-size"> 
-		<p>Background Color:</p> 
-		<input className="bg-input"
-    type="color" 
-    onChange={(e) => 
-		{ setBgColor(e.target.value.substring(1)) }} /> 
-		<p>Size:</p> 
-		<input className="size-input"
-    type="range" 
-    min="100" 
-    max="300"
-		value={size}
-    onChange={(e) => 
-		{setSize(e.target.value)}} /> 
-		</div> 
+		<TextInput setInput={setInput} handleClick={handleClick} />
+		<BgColorAndSize setBgColor={setBgColor} size={size} setSize={setSize} />
 	</div> 
-	<div className="result center"> 
-  <img src={qrCode} alt="qr code" /> 
-		<a className="downloadBtn" href={qrCode} download="QRCode" target="_blank" rel="noreferrer"> 
-		<FiDownload />
-		</a> 
-	</div> 
+	<QrCode qrCode={qrCode} />
 	</motion.div>
 ); 
 } 
